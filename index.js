@@ -10,6 +10,7 @@ function addBookToLibrary(title, author, noOfPages, completed) {
     id = Date.now();
     const book = new Book(id, title, author, noOfPages, completed);
     myLibrary.push(book);
+    populateStorage(title)
 }
 
 
@@ -101,11 +102,7 @@ function removeRecord(id) {
   }
 
 // initialise library array
-let myLibrary = [];
-
-//sample book
-addBookToLibrary('Harry Potter', 'J.K Rowling', 200, 'completed');
-addBookToLibrary('1984', 'George Orwell', 333, 'incomplete');
+restoreLocal()
 
 const containerEl = document.getElementById('container');
 const formBtnEl = document.getElementById("form-button");
@@ -139,3 +136,15 @@ checkbox.addEventListener('change', function(e) {
     }
     
 })
+
+// local storage
+function populateStorage() {
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
+}
+
+function restoreLocal() {
+    myLibrary = JSON.parse(localStorage.getItem("myLibrary"))
+    if (!myLibrary) {
+        myLibrary = [];
+    }
+}
