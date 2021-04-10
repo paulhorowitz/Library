@@ -1,3 +1,7 @@
+body{
+  background-image: url('photo-1524578271613-d550eacf6090.jpeg');
+}
+
 .addBtn {
     padding: 10px;
     width: 25%;
@@ -18,9 +22,11 @@
     background-color: #555;
     color: white;
     padding: 16px 20px;
-    border: none;
+    border: solid #60e960;
+    border-width: 1em;
+    border-radius: 25px;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.9;
     position: fixed;
     bottom: 23px;
     right: 28px;
@@ -147,9 +153,9 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 200px;
-  padding: 20px;
-  margin: 20px;
+  width: 250px;
+  padding: 30px;
+  margin: 30px;
 }
 
   /* On mouse-over, add a deeper shadow */
@@ -171,5 +177,6 @@
 
 .rmv {
   position: absolute;
-  left: 175px;
+  right: 10px;  
+  top: 10px;
 }

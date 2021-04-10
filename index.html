@@ -39,7 +39,28 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+        <pre id="object"></pre>
+
         <script src="index.js" async defer></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBbzzng6MD-lU2UEbENvC0jkmVgbQ4_Lac",
+            authDomain: "pauly-made-library.firebaseapp.com",
+            databaseURL: "https://pauly-made-library-default-rtdb.firebaseio.com",
+            projectId: "pauly-made-library",
+            storageBucket: "pauly-made-library.appspot.com",
+            messagingSenderId: "38439911568",
+            appId: "1:38439911568:web:4ca0008756def5da94d815"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
     </body>
 </html>
